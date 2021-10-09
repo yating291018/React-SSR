@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --config ./webpack/webpack.dev.config.js",
+    "babel": "babel src -d dist/src",
+    "cli": "yarn run dev && yarn run babel",
+    "start": "node ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +21,11 @@
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5"
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "koa-static": "^5.0.0",
+    "koa2": "^2.0.0-alpha.7",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
   }
 }
